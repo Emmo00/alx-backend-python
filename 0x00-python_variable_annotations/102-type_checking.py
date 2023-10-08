@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """adv task"""
-from typing import Tuple
+from typing import Tuple, Iterable, Union
 
 
-def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
+def zoom_array(lst: Iterable, factor: Union[int, float] = 2) -> Tuple:
     """zoom array"""
-    zoomed_in: Tuple = [
+    zoomed_in: Tuple = tuple([
         item for item in lst
-        for i in range(factor)
-    ]
+        for i in range(int(factor))
+    ])
     return zoomed_in
 
 
