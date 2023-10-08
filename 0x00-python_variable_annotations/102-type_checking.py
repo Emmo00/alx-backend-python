@@ -3,7 +3,7 @@
 from typing import Tuple, Iterable, Union
 
 
-def zoom_array(lst: Iterable, factor: Union[int, float] = 2) -> Tuple:
+def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
     """zoom array"""
     zoomed_in: Tuple = tuple([
         item for item in lst
@@ -14,6 +14,6 @@ def zoom_array(lst: Iterable, factor: Union[int, float] = 2) -> Tuple:
 
 array = [12, 72, 91]
 
-zoom_2x = zoom_array(array)
+zoom_2x = zoom_array(tuple(array))
 
-zoom_3x = zoom_array(array, 3.0)
+zoom_3x = zoom_array(tuple(array), 3)
